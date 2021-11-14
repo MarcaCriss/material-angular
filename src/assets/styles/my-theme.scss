@@ -2,119 +2,246 @@
 
 @include mat-core();
 
-// Colores seleccionados
-$my-primary-color: (
-  50 : #e7e2ec,
-  100 : #c4b7d1,
-  200 : #9c87b2,
-  300 : #745793,
-  400 : #57337b,
-  500 : #390f64,
-  600 : #330d5c,
-  700 : #2c0b52,
-  800 : #240848,
-  900 : #170436,
-  A100 : #9a6eff,
-  A200 : #773bff,
-  A400 : #5408ff,
-  A700 : #4900ed,
+// Colores seleccionados light y dark
+$my-light-primary-color: (
+  50: #fffcea,
+  100: #fff7c9,
+  200: #fff2a6,
+  300: #ffed82,
+  400: #ffe967,
+  500: #ffe54c,
+  600: #ffe245,
+  700: #ffde3c,
+  800: #ffda33,
+  900: #ffd324,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff5d2,
+  A700: #fff0b8,
   contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #000000,
-      300 : #ffffff,
-      400 : #ffffff,
-      500 : #ffffff,
-      600 : #ffffff,
-      700 : #ffffff,
-      800 : #ffffff,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #ffffff,
-      A400 : #ffffff,
-      A700 : #ffffff,
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-light-accent-color: (
+  50: #ffebf1,
+  100: #ffcedd,
+  200: #ffaec6,
+  300: #ff8daf,
+  400: #ff749e,
+  500: #ff5c8d,
+  600: #ff5485,
+  700: #ff4a7a,
+  800: #ff4170,
+  900: #ff305d,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffdbe2,
+  A700: #ffc2ce,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-light-warn-color: (
+  50: #ffefe9,
+  100: #ffd8c8,
+  200: #ffbea3,
+  300: #ffa47e,
+  400: #ff9163,
+  500: #ff7d47,
+  600: #ff7540,
+  700: #ff6a37,
+  800: #ff602f,
+  900: #ff4d20,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffd8cf,
+  A700: #ffc3b6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-dark-primary-color: (
+  50: #f8f0e0,
+  100: #eedab3,
+  200: #e3c280,
+  300: #d7a94d,
+  400: #cf9626,
+  500: #c68400,
+  600: #c07c00,
+  700: #b97100,
+  800: #b16700,
+  900: #a45400,
+  A100: #ffe4ce,
+  A200: #ffc89b,
+  A400: #ffab68,
+  A700: #ff9d4f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-dark-accent-color: (
+  50: #f4e0e7,
+  100: #e3b3c3,
+  200: #d0809b,
+  300: #bd4d73,
+  400: #ae2655,
+  500: #a00037,
+  600: #980031,
+  700: #8e002a,
+  800: #840023,
+  900: #730016,
+  A100: #ffa1ac,
+  A200: #ff6e7e,
+  A400: #ff3b51,
+  A700: #ff223a,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$my-dark-warn-color: (
+  50: #f5e1e0,
+  100: #e6b5b3,
+  200: #d68480,
+  300: #c5524d,
+  400: #b82d26,
+  500: #ac0800,
+  600: #a50700,
+  700: #9b0600,
+  800: #920400,
+  900: #820200,
+  A100: #ffafaf,
+  A200: #ff7c7c,
+  A400: #ff4949,
+  A700: #ff3030,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+// Paleta de colores light y dark
+$my-palette-light-primary: mat-palette($my-light-primary-color);
+$my-palette-light-accent: mat-palette($my-light-accent-color);
+$my-palette-light-warn: mat-palette($my-light-warn-color);
+
+$my-palette-dark-primary: mat-palette($my-dark-primary-color);
+$my-palette-dark-accent: mat-palette($my-dark-accent-color);
+$my-palette-dark-warn: mat-palette($my-dark-warn-color);
+
+// Tema Propio light y dark
+$my-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $my-palette-light-primary,
+      accent: $my-palette-light-accent,
+      warn: $my-palette-light-warn,
+    ),
   )
 );
 
-$my-accent-color: (
-  50 : #ede3ed,
-  100 : #d2b9d2,
-  200 : #b48ab5,
-  300 : #965b97,
-  400 : #803880,
-  500 : #69156a,
-  600 : #611262,
-  700 : #560f57,
-  800 : #4c0c4d,
-  900 : #3b063c,
-  A100 : #fc73ff,
-  A200 : #fb40ff,
-  A400 : #f90dff,
-  A700 : #ed00f2,
-  contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #000000,
-      300 : #ffffff,
-      400 : #ffffff,
-      500 : #ffffff,
-      600 : #ffffff,
-      700 : #ffffff,
-      800 : #ffffff,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #000000,
-      A400 : #ffffff,
-      A700 : #ffffff,
+$my-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $my-palette-dark-primary,
+      accent: $my-palette-dark-accent,
+      warn: $my-palette-dark-warn,
+    ),
   )
 );
 
-$my-warn-color: (
-  50 : #faf3e0,
-  100 : #f2e1b3,
-  200 : #e9ce80,
-  300 : #e0ba4d,
-  400 : #daab26,
-  500 : #d39c00,
-  600 : #ce9400,
-  700 : #c88a00,
-  800 : #c28000,
-  900 : #b76e00,
-  A100 : #fff1e0,
-  A200 : #ffdaad,
-  A400 : #ffc37a,
-  A700 : #ffb761,
-  contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #000000,
-      300 : #000000,
-      400 : #000000,
-      500 : #000000,
-      600 : #000000,
-      700 : #000000,
-      800 : #000000,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #000000,
-      A400 : #000000,
-      A700 : #000000,
-  )
-);
+// Aplicar tema a angular material por default
+@include angular-material-theme($my-light-theme);
 
-// Paleta de colores
-$my-palette-primary: mat-palette($my-primary-color);
-$my-palette-accent: mat-palette($my-accent-color);
-$my-palette-warn: mat-palette($my-warn-color);
+.light-theme {
+  @include angular-material-theme($my-light-theme);
+  background: #fff;
+  color: #222;
+}
 
-// Tema Propio
-$my-theme: mat-light-theme((
-  color: (
-    primary: $my-palette-primary,
-    accent: $my-palette-accent,
-    warn: $my-palette-warn,
-  )
-));
-
-// Aplicar tema a angular material
-@include angular-material-theme($my-theme);
+.dark-theme {
+  @include angular-material-theme($my-dark-theme);
+  background: #222;
+  color: #fff;
+}

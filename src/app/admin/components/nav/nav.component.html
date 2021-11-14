@@ -21,6 +21,10 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>testing-material</span>
+      <span class="example-spacer"></span>
+      <mat-slide-toggle class="example-icon" (change)="onSetTheme(theme)">
+        {{ title }}
+      </mat-slide-toggle>
     </mat-toolbar>
     <mat-card class="card">
       <router-outlet></router-outlet>

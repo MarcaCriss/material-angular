@@ -11,6 +11,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const MaterialModules = [
   LayoutModule,
@@ -23,12 +24,13 @@ const MaterialModules = [
   MatPaginatorModule,
   MatSortModule,
   MatTabsModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSlideToggleModule
 ];
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, MaterialModules],
-  exports: [MaterialModules]
+  exports: [MaterialModules],
 })
 export class MaterialModule {}
